@@ -28,8 +28,8 @@ export class TasksService {
     return this.tasks;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} task`;
+  getTaskById(id: string) {
+    return this.tasks.find((task) => task.id === id);
   }
 
   update(id: number, updateTaskDto: UpdateTaskDto) {
