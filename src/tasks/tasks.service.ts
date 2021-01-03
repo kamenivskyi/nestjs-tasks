@@ -36,7 +36,7 @@ export class TasksService {
     return `This action updates a #${id} task`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} task`;
+  removeTask(id: string): void {
+    this.tasks = this.tasks.filter((task) => task.id !== id);
   }
 }
