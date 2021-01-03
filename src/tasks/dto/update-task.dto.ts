@@ -1,1 +1,4 @@
-export class UpdateTaskDto {}
+export class UpdateTaskDto {
+  status: string;
+  id: string;
+}
