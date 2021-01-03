@@ -10,12 +10,10 @@ import {
 import { TasksService } from './tasks.service';
 import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
-import { Task } from './task.model';
 
 @Controller('tasks')
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
-  private tasks: Task[] = [];
 
   @Post()
   createTask(@Body() createTaskDto: CreateTaskDto) {
