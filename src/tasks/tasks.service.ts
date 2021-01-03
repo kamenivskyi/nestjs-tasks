@@ -9,7 +9,7 @@ import { Task, TaskStatus } from './task.model';
 export class TasksService {
   private tasks: Task[] = [];
 
-  createTask(createTaskDto: CreateTaskDto) {
+  createTask(createTaskDto: CreateTaskDto): Task {
     const { title, description } = createTaskDto;
 
     const newTask = {
@@ -24,8 +24,8 @@ export class TasksService {
     return newTask;
   }
 
-  findAll() {
-    return `This action returns all tasks`;
+  getAllTasks(): Task[] {
+    return this.tasks;
   }
 
   findOne(id: number) {
